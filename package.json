@@ -1,0 +1,22 @@
+{
+  "name": "color-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon.cmd index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyotisko/simple-color-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jyotisko/simple-color-api/issues"
+  },
+  "homepage": "https://github.com/jyotisko/simple-color-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
