@@ -16,13 +16,16 @@ const getColorsForAPI = count => {
 };
 
 const app = express();
+const router = express.Router();
 
-app.get('/api/v1/random', (req, res) => {
+app.use('/api/v1/random', router);
+
+router.get('/', (req, res) => {
   const colors = getColorsForAPI(100);
   res.status(200).json({ message: 'success', count: 100, colors: colors });
 });
 
-app.get('/api/v1/random/:count', (req, res) => {
+router.get('/:count', (req, res) => {
   const count = +req.params.count;
   const colors = getColorsForAPI(count);
   res.status(200).json({ message: 'success', count: count, colors: colors });
