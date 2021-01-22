@@ -20,7 +20,7 @@ const router = express.Router();
 
 app.use('/api/v1/random', router);
 
-router.get('/', (req, res) => {
+router.get('/', (_, res) => {
   const colors = getColorsForAPI(100);
   res.status(200).json({ message: 'success', count: 100, colors: colors });
 });
