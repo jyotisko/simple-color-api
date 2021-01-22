@@ -1,4 +1,9 @@
 const express = require('express');
+const dotenv = require('dotenv');
+
+dotenv.config({
+  path: '.env'
+});
 
 const generateRandomColor = amount => {
   const colors = [];
@@ -31,5 +36,5 @@ router.get('/:count', (req, res) => {
   res.status(200).json({ message: 'success', count: count, colors: colors });
 });
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
